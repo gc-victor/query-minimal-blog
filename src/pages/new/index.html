@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Create New Post</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@16..32,100..900&display=swap" rel="stylesheet">
+    <script src="/_/asset/public/js/hot-reload.js" defer></script>
+    <style>
+        body {
+            color: #020617;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-container {
+            max-width: 400px;
+
+            input,
+            textarea {
+                border-radius: 3px;
+                border: 1px solid #cbd5e1;
+                font-size: 1rem;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                width: 100%;
+            }
+
+            button {
+                background-color: #1e293b;
+                border-radius: 3px;
+                border: none;
+                color: white;
+                cursor: pointer;
+                font-size: 1rem;
+                padding: .75rem;
+
+                &:hover {
+                    background-color: #020617;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Create New Post</h1>
+    <form class="form-container" action="/api/post" method="POST">
+        <input name="title" placeholder="Title" required>
+        <textarea name="content" placeholder="Content" required></textarea>
+        <button type="submit">Create Post</button>
+    </form>
+</body>
+
+</html>
